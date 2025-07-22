@@ -1,0 +1,112 @@
+@use '../../Assets/Mixins.scss' as *;
+
+.ActiorPage .container {
+    .acWrp {
+        display: flex;
+        margin-top: 100px;
+        margin-bottom: 50px;
+        gap: 20px;
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+    }
+
+    .ap-img {
+        img {
+            border-radius: 10px;
+            max-width: 100%;
+            height: auto;
+        }
+    }
+
+    .ap-info {
+        border: 1px solid #262626;
+        padding: 20px;
+        border-radius: 10px;
+        background-color: #1A1A1A;
+        width: 100%;
+
+        .apName {
+            @include font(600, 30, 1.5);
+            color: rgb(231, 221, 221);
+            margin-bottom: 20px;
+        }
+
+        .apSubtitle {
+            @include font(600, 25, 1.5);
+            color: rgb(231, 221, 221);
+            margin-bottom: 10px;
+        }
+
+        .apDisc {
+            @include font(400, 18, 1.5);
+            color: rgb(231, 221, 221);
+            margin-bottom: 30px;
+
+            .readMore {
+                color: #999999;
+                border: none;
+                outline: none;
+                display: inline-flex;
+                align-items: center;
+                background-color: transparent;
+                @include font(400, 18, 1.5);
+
+                &:hover {
+                    color: rebeccapurple;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .personalInfo {
+            .PInfo {
+                @include font(600, 25, 1.5);
+                color: rgb(231, 221, 221);
+                margin-bottom: 10px;
+            }
+
+            .KnownFor {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 20px;
+
+                div {
+                    @media (max-width: 768px) {
+                        text-align: center;
+                        h2{
+                            text-align: center;
+                        }
+                         p{
+                            text-align: center;
+                        }
+                    }
+                }
+
+                @media (max-width: 768px) {
+                    flex-direction: column;
+                    align-items: center;
+                }
+
+                div {
+                    text-align: left;
+
+                    h2 {
+                        @include font(500, 20, 1.5);
+                        color: rgb(231, 221, 221);
+                        margin-bottom: 5px;
+                    }
+
+                    p {
+                        @include font(400, 14, 1.5);
+                        color: rgb(231, 221, 221);
+                        margin-bottom: 5px;
+                    }
+                }
+            }
+        }
+    }
+}

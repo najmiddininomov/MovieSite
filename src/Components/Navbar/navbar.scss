@@ -1,28 +1,36 @@
 @use '../../Assets/Mixins.scss' as *;
 
 .Navbar {
-  background-color: #0F0F0F;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
 
   .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 20px;
+    padding: 20px;
+
+    .nav-logo img {
+      width: 120px;
+    }
 
     .list {
       display: flex;
-      justify-content: space-between;
       gap: 15px;
+      background-color: rgba(15, 15, 15, 0.7);
+      padding: 10px 20px;
       border-radius: 8px;
       border: 3px solid #1F1F1F;
-      background-color: #0F0F0F;
-      padding: 10px 20px;
 
       li {
-        .ahref{
+        list-style: none;
+
+        .ahref {
           color: #BFBFBF;
           @include font(400, 14, 1.2);
-          background-color: #0F0F0F;
           padding: 5px 7px;
           border-radius: 5px;
           transition: all 0.2s;
@@ -36,37 +44,117 @@
     }
 
     .nav-icons {
-      color: white;
       display: flex;
       gap: 15px;
+      color: white;
 
       .icon {
-        transition: all 0.2s;
+        font-size: 20px;
         cursor: pointer;
 
         &:hover {
           transform: scale(1.2);
+          color: #f0a500;
         }
       }
     }
 
-    // ✅ Responsive holat
-    @include media(600px) {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 15px;
+    .hamburger {
+      display: none;
+      font-size: 28px;
+      color: white;
+      cursor: pointer;
+    }
 
-      .list {
-        flex-direction: column;
-        width: 100%;
-        gap: 10px;
-        padding: 10px;
+    @include media(650px) {
+      .list,
+      .nav-icons {
+        display: none;
       }
 
-      .nav-icons {
-        justify-content: flex-start;
-        width: 100%;
+      .hamburger {
+        display: block;
       }
     }
+  }
+}
+
+.ahref {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  transition: 0.3s;
+
+  &:hover {
+    color: #f0a500;
+  }
+}
+
+.active {
+  color: #f0a500;
+  font-weight: 600;
+  border-bottom: 2px solid #f0a500;
+}
+
+// Sidebar menu
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 240px;
+  height: 100vh;
+  background-color: #121212;
+  color: white;
+  padding: 20px;
+  transition: right 0.3s ease;
+  z-index: 999;
+
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  .closeBtn {
+    font-size: 28px;
+    align-self: flex-end;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+      color: #f0a500;
+    }
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    li a {
+      color: white;
+      font-weight: 500;
+      font-size: 16px;
+
+      &:hover {
+        color: #f0a500;
+      }
+    }
+  }
+
+  .sidebar-icons {
+    display: flex;
+    gap: 15px;
+
+    .icon {
+      font-size: 22px;
+      cursor: pointer;
+
+      &:hover {
+        color: #f0a500;
+      }
+    }
+  }
+
+  &.open {
+    right: 0;
   }
 }

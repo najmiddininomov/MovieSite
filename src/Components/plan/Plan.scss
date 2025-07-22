@@ -1,0 +1,259 @@
+@use '../../Assets/Mixins.scss' as *;
+
+.Plan {
+    
+    .plan-info {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 30px;
+
+        h2 {
+            color: white;
+            @include font (700, 28, 1.5);
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #999999;
+            @include font (400, 16, 1.5);
+            margin-bottom: 20px;
+            max-width: 1010px;
+        }
+
+        .planBtns {
+            display: flex;
+            padding: 10px;
+            border-radius: 8px;
+            background-color: #0F0F0F;
+            border: 1px solid #262626;
+
+            .month {
+                padding: 12px 20px;
+                color: white;
+                background-color: transparent;
+                border: none;
+                outline: none;
+                cursor: pointer;
+                border-radius: 8px;
+
+                &.active {
+                    background-color: #1F1F1F;
+                }
+            }
+
+            .year {
+                padding: 12px 20px;
+                color: white;
+                background-color: transparent;
+                border: none;
+                cursor: pointer;
+                outline: none;
+                border-radius: 8px;
+
+                 &.active {
+                    background-color: #1F1F1F;
+                }
+            }
+        }
+    }
+
+    .Plan-cards {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap;
+        .card {
+            padding: 40px;
+            width: 390px;
+            border: 1px solid #262626;
+            border-radius: 10px;
+
+            .title {
+                @include font (700, 20, 1.5);
+                margin-bottom: 12px;
+                color: white;
+                font-style: bold
+            }
+
+            .disc {
+                @include font (400, 14, 1.5);
+                margin-bottom: 20px;
+                color: #999999;
+            }
+
+            .price {
+                @include font (600, 30, 1.5);
+                margin-bottom: 20px;
+                color: white;
+
+                span {
+                    @include font (400, 14, 1.5);
+                    color: #999999;
+                }
+            }
+
+            .priceBtns {
+                display: flex;
+                gap: 10px;
+                .free {
+                    padding: 12px 20px;
+                    color: white;
+                    background-color: transparent;
+                    border: 1px solid #262626;
+                    outline: none;
+                    cursor: pointer;
+                    border-radius: 8px;
+                    transition: background 0.1s;
+
+                    &:hover {
+                        background-color: #1F1F1F;
+                    }
+                }
+
+                .notFree {
+                    background-color: red;
+                    color: white;
+                    border: none;
+                    padding: 12px 24px;
+                    border-radius: 8px;
+                    font-size: 14px;
+                    font-weight: 500;
+                    white-space: nowrap;
+                    cursor: pointer;
+                    transition: background 0.1s;
+                    &:hover{
+                        background-color: darkred;
+                    }
+                }
+            }
+        }
+    }
+
+}
+@media (max-width: 1024px) {
+  .Plan {
+    .plan-info {
+      flex-direction: column;
+      align-items: flex-start;
+
+      h2 {
+        font-size: 24px;
+      }
+
+      p {
+        font-size: 15px;
+      }
+
+      .planBtns {
+        margin: 0 auto;
+      }
+    }
+
+    .Plan-cards {
+      justify-content: center;
+      .card {
+        width: 100%;
+        max-width: 500px;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .Plan {
+    .plan-info {
+      h2 {
+        font-size: 22px;
+      }
+
+      p {
+        font-size: 14px;
+        max-width: 100%;
+      }
+
+      .planBtns {
+        flex-direction: column;
+        gap: 10px;
+
+        .month,
+        .year {
+          width: 100%;
+        }
+      }
+    }
+
+    .Plan-cards {
+      flex-direction: column;
+      align-items: center;
+
+      .card {
+        width: 100%;
+        padding: 30px 20px;
+
+        .title {
+          font-size: 18px;
+        }
+
+        .disc {
+          font-size: 13px;
+        }
+
+        .price {
+          font-size: 26px;
+
+          span {
+            font-size: 13px;
+          }
+        }
+
+        .priceBtns {
+          flex-direction: column;
+          gap: 10px;
+          width: 100%;
+
+          .free,
+          .notFree {
+            width: 100%;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .Plan {
+    .plan-info {
+      h2 {
+        font-size: 20px;
+      }
+
+      p {
+        font-size: 13px;
+      }
+    }
+
+    .Plan-cards {
+      .card {
+        .title {
+          font-size: 17px;
+        }
+
+        .disc {
+          font-size: 12px;
+        }
+
+        .price {
+          font-size: 24px;
+
+          span {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}

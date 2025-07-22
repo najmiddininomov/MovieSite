@@ -42,6 +42,10 @@ const Movies = () => {
         </div>
       </div>
       <Genre/>
+      <Genre/>
+      <Genre/>
+      <Genre/>
+
       <Prem/>
     </div>
   );

@@ -4,11 +4,10 @@
   background-color: #0F0F0F;
   color: #BFBFBF;
   padding: 60px 0 30px;
-  margin-top: 100px;
 
   .footer-top {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
     gap: 40px;
     padding-bottom: 40px;
@@ -87,7 +86,7 @@
   // Responsive
   @include media(768px) {
     .footer-top {
-      flex-direction: column;
+      // flex-direction: column;
       gap: 30px;
     }
 

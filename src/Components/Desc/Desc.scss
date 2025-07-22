@@ -1,0 +1,239 @@
+@use '../../Assets/Mixins.scss' as *;
+
+.Desc {
+  .container {
+    display: flex;
+    gap: 30px;
+    // justify-content: center;
+    // flex-wrap: wrap; 
+  }
+
+  .info {
+    flex: 1 1 65%;
+    max-width: 65%;
+
+    .titles {
+      border: 1px solid #262626;
+      padding: 20px;
+      border-radius: 10px;
+      background-color: #1A1A1A;
+      margin-bottom: 30px;
+    }
+
+    .sub-title {
+      @include font(500, 18, 1.5);
+      color: #999999;
+      margin-bottom: 14px;
+    }
+
+    .title {
+      @include font(500, 18, 1.5);
+      color: white;
+      max-width: 900px;
+    }
+
+    .review {
+      border: 1px solid #262626;
+      padding: 20px;
+      border-radius: 10px;
+      background-color: #1A1A1A;
+      margin-bottom: 30px;
+
+      .review-title {
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: space-between;
+
+        h2 {
+          @include font(500, 18, 1.5);
+          color: #999999;
+        }
+
+        .add {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          padding: 10px 17px;
+          background-color: #141414;
+          border: 1px solid #262626;
+          border-radius: 8px;
+          @include font(500, 15, 1.5);
+          color: white;
+
+          &:hover {
+            background-color: #0F0F0F;
+            cursor: pointer;
+          }
+        }
+      }
+
+      .card-wrp {
+        display: flex;
+        gap: 20px;
+
+        .card {
+          border: 1px solid #262626;
+          background-color: #0F0F0F;
+          padding: 20px;
+          width: 100%;
+          max-width: 400px;
+          border-radius: 8px;
+
+          .rate {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            p {
+              @include font(500, 20, 1.5);
+              margin-bottom: 7px;
+              color: white;
+            }
+
+            .where {
+              @include font(500, 18, 1.5);
+              color: #999999;
+              margin-bottom: 20px;
+            }
+
+            .stars {
+              display: flex;
+              align-items: center;
+              @include font(500, 18, 1.5);
+              color: #999999;
+            }
+          }
+
+          .Review-desc {
+            @include font(400, 18, 1.5);
+            color: #999999;
+            max-width: 388px;
+          }
+        }
+      }
+    }
+  }
+
+  .date {
+    flex: 1 1 35%;
+    max-width: 35%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #111;
+    padding: 20px;
+    border-radius: 12px;
+    color: #fff;
+
+    .released-year,
+    .section {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .icon {
+      font-size: 18px;
+      color: #9ca3af;
+    }
+
+    .label {
+      font-size: 14px;
+      color: #9ca3af;
+    }
+
+    .value {
+      font-size: 16px;
+      font-weight: 600;
+      color: #fff;
+    }
+
+    .badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+
+      .badge {
+        background-color: #1f2937;
+        padding: 4px 12px;
+        border-radius: 6px;
+        font-size: 14px;
+      }
+    }
+
+    .ratings {
+      display: flex;
+      gap: 12px;
+
+      .rating-box {
+        background-color: #1f2937;
+        padding: 10px;
+        border-radius: 8px;
+        text-align: center;
+        flex: 1;
+
+        .source {
+          font-size: 14px;
+          margin-bottom: 4px;
+          display: block;
+        }
+
+        .stars {
+          color: red;
+          font-size: 16px;
+        }
+
+        .score {
+          font-size: 14px;
+          font-weight: bold;
+        }
+      }
+    }
+
+    .person-card {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background-color: #1f2937;
+      padding: 10px;
+      border-radius: 8px;
+
+      img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+      }
+
+      .name {
+        font-weight: 600;
+      }
+
+      .country {
+        font-size: 13px;
+        color: #9ca3af;
+      }
+    }
+  }
+
+  // 🔻 Responsive media query
+  @media (max-width: 1200px) {
+    .container {
+      flex-direction: column;
+    }
+
+    .info,
+    .date {
+      max-width: 100%;
+      width: 100%;
+    }
+
+    .card-wrp {
+             flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .card {
+      max-width: 100%;
+    }
+  }
+}
