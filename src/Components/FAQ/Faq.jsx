@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './FAQ.scss'
+import './Faq.scss'
 const faqItems = [
   { id: 1, question: "What is StreamVibe?", answer: "StreamVibe is a streaming service that allows you to watch movies and shows on demand." },
   { id: 2, question: "How much does StreamVibe cost?", answer: "StreamVibe pricing depends on the plan you choose." },
