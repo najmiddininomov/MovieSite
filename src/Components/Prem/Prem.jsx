@@ -1,6 +1,6 @@
 import React from 'react';
 import './Prem.scss';
-import bgImage from '../../assets/images/BG.png';
+import bgImage from '../../Assets/images/BG.png';
 
 const Prem = () => {
   return (
