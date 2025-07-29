@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useLocation } from 'react-router-dom';
 import { CiPlay1 } from "react-icons/ci";
 import { AiOutlineLike } from "react-icons/ai";
 import { HiOutlineVolumeUp } from "react-icons/hi";
@@ -13,6 +13,7 @@ import axios from 'axios';
 
 const Inside = () => {
   const { id } = useParams();
+  const location = useLocation();
   const [movie, setMovie] = useState(null);
   const [showTrailer, setShowTrailer] = useState(false);
   const [trailerKey, setTrailerKey] = useState(null);
@@ -50,7 +51,9 @@ const Inside = () => {
 
     getMovie();
   }, [id]);
-
+   useEffect(() => {
+    window.scrollTo(0, 0); 
+  }, [location.pathname]);
   return (
     <div className="Inside">
       {movie ? (

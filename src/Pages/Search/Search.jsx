@@ -72,7 +72,13 @@ const Search = () => {
         <div className="search-results">
           {results && results.length > 0 ? (
             results.map((movie) => (
-              <Link to={`/Inside/${movie.id}`} key={movie.id}>
+              <Link
+                to={
+                  category === "person"
+                    ? `/Actior/${movie.id}`
+                    : `/Inside/${movie.id}`
+                }
+              >
                 <div className="movie-card">
                   <img
                     src={

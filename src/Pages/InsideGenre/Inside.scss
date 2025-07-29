@@ -1,10 +1,11 @@
 @use '../../Assets/Mixins.scss' as *;
 
 .Inside {
+  padding-top: 80px;
   .like {
     position: relative;
     background-color: #000;
-    padding: 80px 0 60px;
+    padding: 10px 0 60px;
     margin-bottom: 50px;
 
     .container {
@@ -124,9 +125,10 @@
       padding: 30px 0;
       margin-bottom: 100px;
       text-align: center;
-      // .cintainer{
-      //   padding-top: 100px !important;
-      // }
+      .cintainer{
+        padding-top: 100px ;
+        margin-top: 100px;
+      }
       .backBtn {
         background: #fff;
         border: none;
