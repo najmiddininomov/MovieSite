@@ -57,7 +57,7 @@ const Navbar = () => {
           <li><Link to="/Subscriptions" onClick={() => setMenuOpen(false)}>Subscriptions</Link></li>
         </ul>
         <div className="sidebar-icons">
-          <IoSearchOutline className='icon' />
+         <Link to={'/Search'}><IoSearchOutline className='icon' /></Link> 
           <IoMdNotificationsOutline className='icon' />
         </div>
       </div>
