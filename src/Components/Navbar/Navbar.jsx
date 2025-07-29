@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Navbar.scss';
+import './navbar.scss';
 import Logo from '../../Assets/images/Logo.png';
 import { IoSearchOutline } from "react-icons/io5";
 import { IoMdNotificationsOutline } from "react-icons/io";
