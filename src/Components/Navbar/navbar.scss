@@ -63,7 +63,7 @@
     .hamburger {
       display: none;
       font-size: 28px;
-      color: white;
+      color: white !important;
       cursor: pointer;
     }
 
@@ -148,6 +148,7 @@
     .icon {
       font-size: 22px;
       cursor: pointer;
+      color: white;
 
       &:hover {
         color: #f0a500;
