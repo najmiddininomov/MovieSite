@@ -1,8 +1,6 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Genre.scss";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
-import logo from "../../Assets/images/slide.svg";
-import container from "../../Assets/images/dragon.jpg";
 import { Link } from "react-router-dom";
 
 // Swiper
@@ -11,7 +9,25 @@ import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 
-const Genre = ({title = "Trending"}) => {
+// API xizmati
+import Api_Service from "../../Service/Service_Api";
+
+const Genre = ({ title = "Trending", URL, autoplayDelay = 3000, loop = true, navigationId }) => {
+  const [movies, setMovies] = useState([]);
+
+ const getApi = async () => {
+  try {
+    const response = await Api_Service.getData(URL);
+    const results = response.data.results || response.data.cast || [];
+    setMovies(results);
+  } catch (error) {
+    console.log("Ma'lumot olishda xatolik:", error);
+  }
+};
+
+  useEffect(() => {
+    getApi();
+  }, [URL]);
 
   return (
     <div className="Genre">
@@ -19,13 +35,12 @@ const Genre = ({title = "Trending"}) => {
         <div className="g-title">
           <h2>{title}</h2>
           <div className="g-icons">
-            {/* <div className="icon-box ">
+            <div className="icon-box" id={`${navigationId}-prev`}>
               <FaArrowLeft />
-            </div> */}
-            {/* <img src={logo} alt="logo" /> */}
-            {/* <div className="icon-box ">
+            </div>
+            <div className="icon-box" id={`${navigationId}-next`}>
               <FaArrowRight />
-            </div> */}
+            </div>
           </div>
         </div>
 
@@ -34,26 +49,37 @@ const Genre = ({title = "Trending"}) => {
           spaceBetween={20}
           slidesPerView={5}
           autoplay={{
-            delay: 3000,
+            delay: autoplayDelay,
             reverseDirection: false,
             disableOnInteraction: false,
           }}
-          loop={true}
+          navigation={{
+            prevEl: `#${navigationId}-prev`,
+            nextEl: `#${navigationId}-next`,
+          }}
+          loop={loop && movies.length > 5}
           breakpoints={{
             1024: { slidesPerView: 6 },
-            768: { slidesPerView: 3},
+            768: { slidesPerView: 3 },
             480: { slidesPerView: 2 },
             0: { slidesPerView: 1 },
           }}
         >
-          {[...Array(10)].map((_, index) => (
-            <SwiperSlide key={index}>
-              <Link to="/Inside">
+          {movies.map((movie) => (
+            <SwiperSlide key={movie.id}>
+              <Link to={`/Inside/${movie.id}`}>
                 <div className="card">
-                  <img src={container} alt="movie" />
+                  <img
+                    src={
+                      movie.poster_path
+                        ? `https://image.tmdb.org/t/p/w500${movie.poster_path}`
+                        : "https://via.placeholder.com/300x450?text=No+Image"
+                    }
+                    alt={movie.title}
+                  />
                   <div className="card-info">
-                    <h2 className="card-title">How to Train Your Dragon</h2>
-                    <p>06 Jun 2025</p>
+                    <h2 className="card-title">{movie.title}</h2>
+                    <p>{movie.release_date}</p>
                   </div>
                 </div>
               </Link>

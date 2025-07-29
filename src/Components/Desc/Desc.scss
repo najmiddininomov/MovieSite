@@ -18,6 +18,30 @@
       border-radius: 10px;
       background-color: #1A1A1A;
       margin-bottom: 30px;
+
+      .read-more-btn {
+        margin-top: 10px;
+        background-color: transparent;
+        border: 1px solid #4b5563; // kulrang border
+        color: #f3f4f6; // och oq (light)
+        padding: 6px 14px;
+        font-size: 14px;
+        font-weight: 500;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background-color: #374151; // hover payti kulroq fon
+          border-color: #6b7280;
+        }
+
+        &:active {
+          transform: scale(0.98);
+        }
+      }
+
+
     }
 
     .sub-title {
@@ -199,8 +223,9 @@
       border-radius: 8px;
 
       img {
-        width: 40px;
-        height: 40px;
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
         border-radius: 50%;
       }
 
@@ -228,8 +253,8 @@
     }
 
     .card-wrp {
-             flex-wrap: wrap;
-        justify-content: space-around;
+      flex-wrap: wrap;
+      justify-content: space-around;
     }
 
     .card {

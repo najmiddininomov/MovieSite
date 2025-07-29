@@ -35,7 +35,7 @@ const Navbar = () => {
           </ul>
 
           <div className="nav-icons">
-            <IoSearchOutline className='icon' />
+            <Link to={'/Search'}><IoSearchOutline className='icon' /></Link>
             <IoMdNotificationsOutline className='icon' />
           </div>
 

@@ -25,7 +25,7 @@ const Home = () => {
     </div>
   </div>
 </div>
-<Genre />
+<Genre URL = "trending/movie/day"/>
 <FAQ/> 
 <Plan/>
 <Prem/>

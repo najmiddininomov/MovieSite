@@ -1,6 +1,7 @@
 @use '../../Assets/Mixins.scss' as *;
 
 .Movies {
+  margin-top: 100px;
   .hero {
     position: relative;
     background-color: #000;

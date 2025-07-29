@@ -11,7 +11,7 @@ import Prem from "../../Components/Prem/Prem";
 const Movies = () => {
   return (
     <div className="Movies">
-      <div className="hero">
+      {/* <div className="hero">
         <div className="container">
           <div className="hero-img">
             <img src={Avangers} alt="" />
@@ -40,11 +40,46 @@ const Movies = () => {
             </div>
           </div>
         </div>
-      </div>
-      <Genre/>
-      <Genre/>
-      <Genre/>
-      <Genre/>
+      </div> */}
+     <Genre 
+  title="Trending Today" 
+  URL="trending/movie/day" 
+  autoplayDelay={2500} 
+  loop={true}
+  navigationId="trending"
+/>
+
+<Genre 
+  title="Top Rated" 
+  URL="movie/top_rated" 
+  autoplayDelay={4000} 
+  loop={true}
+  navigationId="toprated"
+/>
+
+<Genre 
+  title="Upcoming" 
+  URL="movie/upcoming" 
+  autoplayDelay={3500} 
+  loop={true}
+  navigationId="upcoming"
+/>
+
+<Genre 
+  title="Now Playing" 
+  URL="movie/now_playing" 
+  autoplayDelay={3000} 
+  loop={false}
+  navigationId="nowplaying"
+/>
+
+<Genre 
+  title="Popular" 
+  URL="movie/popular" 
+  autoplayDelay={4500} 
+  loop={true}
+  navigationId="popular"
+/>
 
       <Prem/>
     </div>
