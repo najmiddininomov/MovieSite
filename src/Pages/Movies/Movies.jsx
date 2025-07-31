@@ -41,47 +41,46 @@ const Movies = () => {
           </div>
         </div>
       </div> */}
-     <Genre 
-  title="Trending Today" 
-  URL="trending/movie/day" 
-  autoplayDelay={2500} 
-  loop={true}
-  navigationId="trending"
-/>
 
-<Genre 
-  title="Top Rated" 
-  URL="movie/top_rated" 
-  autoplayDelay={4000} 
-  loop={true}
-  navigationId="toprated"
-/>
+      <Genre
+        title="Top Rated"
+        URL="movie/top_rated"
+        autoplayDelay={4000}
+        loop={true}
+        navigationId="toprated"
+      />
 
-<Genre 
-  title="Upcoming" 
-  URL="movie/upcoming" 
-  autoplayDelay={3500} 
-  loop={true}
-  navigationId="upcoming"
-/>
+      <Genre
+        title="Popular"
+        URL="movie/popular"
+        autoplayDelay={4500}
+        loop={true}
+        navigationId="popular"
+      />
+      <Genre
+        title="Now Playing"
+        URL="movie/now_playing"
+        autoplayDelay={3000}
+        loop={false}
+        navigationId="nowplaying"
+      />
+      <Genre
+        title="Upcoming"
+        URL="movie/upcoming"
+        autoplayDelay={3500}
+        loop={true}
+        navigationId="upcoming"
+      />
 
-<Genre 
-  title="Now Playing" 
-  URL="movie/now_playing" 
-  autoplayDelay={3000} 
-  loop={false}
-  navigationId="nowplaying"
-/>
+      <Genre
+        title="Trending Today"
+        URL="trending/movie/day"
+        autoplayDelay={2500}
+        loop={true}
+        navigationId="trending"
+      />
 
-<Genre 
-  title="Popular" 
-  URL="movie/popular" 
-  autoplayDelay={4500} 
-  loop={true}
-  navigationId="popular"
-/>
-
-      <Prem/>
+      <Prem />
     </div>
   );
 };

@@ -61,18 +61,20 @@ const Inside = () => {
           {showTrailer ? (
             <div className="trailer">
               <div className="container">
-                {/* <button className="backBtn" onClick={() => setShowTrailer(false)}>
-                  ⬅ Back
-                </button> */}
+               
                 <iframe
                   width="100%"
                   height="600vh"
-                  src={`https://www.youtube.com/embed/${trailerKey}?autoplay=1`}
+                  src={`https://www.youtube.com/embed/${trailerKey}?autoplay=1 `}
                   title="YouTube video player"
                   frameBorder="0"
                   allow="autoplay; encrypted-media"
                   allowFullScreen
                 ></iframe>
+                
+                 <button className="backBtn" onClick={() => setShowTrailer(false)}>
+                  ⬅ Back
+                </button>
               </div>
             </div>
           ) : (
@@ -87,7 +89,7 @@ const Inside = () => {
                 <div className="hero-title">
                   <h2>{movie.title}</h2>
                   <p>{movie.overview.slice(0, 149 )}</p>
-                  <p><strong>Release Date:</strong> {movie.release_date}</p>
+                  {/* <p><strong>Release Date:</strong> {movie.release_date}</p> */}
                   <div className="buttons">
                     <button
                       className="playNow"

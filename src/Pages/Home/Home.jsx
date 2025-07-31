@@ -19,9 +19,9 @@ const Home = () => {
     <div className="hero-content">
       <h1 className="title">The Best Streaming Experience</h1>
       <p className="desc">StreamVibe is the best streaming experience for watching your favorite movies and shows on demand, anytime, anywhere. With StreamVibe, you can enjoy a wide variety of content, including the latest blockbusters, classic movies, popular TV shows, and more. You can also create your own watchlists, so you can easily find the content you want to watch.</p>
-      <Link to="/Movies">
+      {/* <Link to="/Movies">
         <button className="start-btn">▶ Start Watching Now</button>
-      </Link>
+      </Link> */}
     </div>
   </div>
 </div>

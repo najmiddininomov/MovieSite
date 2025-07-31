@@ -34,18 +34,31 @@
 
       &.social {
         .icons {
-          display: flex;
-          gap: 10px;
+          a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+            color: #ccc;
+            text-decoration: none;
+            transition: all 0.3s ease;
 
-          svg {
-            font-size: 18px;
-            color: white;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: all 0.3s;
+            svg {
+              font-size: 20px;
+              color: white;
+              margin-bottom: 5px;
+
+              transition: color 0.3s;
+            }
 
             &:hover {
-              transform: translateY(-3px);
+              color: #e50914;
+
+              svg {
+                color: #e50914;
+
+                transform: scale(1.1);
+              }
             }
           }
         }

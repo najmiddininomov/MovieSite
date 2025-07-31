@@ -180,8 +180,16 @@
       .badge {
         background-color: #1f2937;
         padding: 4px 12px;
+        cursor: pointer;
         border-radius: 6px;
         font-size: 14px;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background: linear-gradient(135deg, #e50914, #b0060f);
+          box-shadow: 0 6px 15px rgba(229, 0, 0, 0.4);
+
+        }
       }
     }
 
@@ -220,7 +228,14 @@
       gap: 10px;
       background-color: #1f2937;
       padding: 10px;
+        transition: all 0.3s ease;
       border-radius: 8px;
+      
+        &:hover {
+          background: linear-gradient(135deg, #e50914, #b0060f);
+          box-shadow: 0 6px 15px rgba(229, 0, 0, 0.4);
+          cursor: pointer;
+        }
 
       img {
         width: 50px;

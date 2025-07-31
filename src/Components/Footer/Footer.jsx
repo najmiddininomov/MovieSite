@@ -1,6 +1,6 @@
-import React from 'react'
-import './Footer.scss'
-import { FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa";
+import React from "react";
+import "./Footer.scss";
+import { FaInstagram, FaFacebookF, FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
   return (
@@ -38,11 +38,29 @@ const Footer = () => {
             <p>Features</p>
           </div>
           <div className="column social">
-            <h3>Connect With Us</h3>
+            <h3>Connect With Creator</h3>
             <div className="icons">
-             <a href=""><FaFacebookF /></a> 
-              <FaTwitter />
-              <FaLinkedinIn />
+              <a
+                href="https://instagram.com/najmiddin_life"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaInstagram /> Instagram
+              </a>
+              <a
+                href="https://x.com/NajmiddinInomov"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaXTwitter /> X
+              </a>
+              <a
+                href="https://facebook.com/najmiddin"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaFacebookF /> Facebook
+              </a>
             </div>
           </div>
         </div>
@@ -50,7 +68,9 @@ const Footer = () => {
         <hr />
 
         <div className="footer-bottom">
-          <p>©2023 streamvib, All Rights Reserved and Created by Najmiddin Inomov</p>
+          <p>
+            ©2023 streamvib, All Rights Reserved and Created by Najmiddin Inomov
+          </p>
           <div className="links">
             <span>Terms of Use</span>
             <span>Privacy Policy</span>
@@ -59,7 +79,7 @@ const Footer = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

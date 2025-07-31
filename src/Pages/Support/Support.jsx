@@ -58,7 +58,7 @@ const Support = () => {
                 <div className="form-group phone-input">
                   <label htmlFor="phone">Phone Number</label>
                   <div className="phone-wrapper">
-                    <div className="drop">
+                    {/* <div className="drop">
                       <span className="flag" onClick={handleClick}>
                         <img src={India} alt="" /> <IoMdArrowDropdown />
                       </span>
@@ -70,7 +70,7 @@ const Support = () => {
                           <img src={India} alt="" />{" "}
                         </span>
                       </div>
-                    </div>
+                    </div> */}
 
                     <input
                       type="tel"

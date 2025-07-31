@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const Search = () => {
   const [value, setQuery] = useState("");
   const [results, setResults] = useState([]);
-  const [category, setCategory] = useState("multi");
+  const [category, setCategory] = useState("movie");
 
   const SearchData = async (e) => {
     e.preventDefault();
@@ -44,10 +44,10 @@ const Search = () => {
         </form>
         <div className="sorts">
           <button
-            className={`sorts-btns ${category === "multi" ? "active" : ""}`}
-            onClick={() => setCategory("multi")}
+            className={`sorts-btns ${category === "movie" ? "active" : ""}`}
+            onClick={() => setCategory("movie")}
           >
-            All
+            Movie
           </button>
           <button
             className={`sorts-btns ${category === "tv" ? "active" : ""}`}
@@ -56,16 +56,16 @@ const Search = () => {
             TV
           </button>
           <button
-            className={`sorts-btns ${category === "movie" ? "active" : ""}`}
-            onClick={() => setCategory("movie")}
-          >
-            Movie
-          </button>
-          <button
             className={`sorts-btns ${category === "person" ? "active" : ""}`}
             onClick={() => setCategory("person")}
           >
             Actor
+          </button>
+          <button
+            className={`sorts-btns ${category === "multi" ? "active" : ""}`}
+            onClick={() => setCategory("multi")}
+          >
+            All
           </button>
         </div>
 
