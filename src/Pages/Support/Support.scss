@@ -3,7 +3,7 @@
 .Support {
     margin-top: 150px;
 
-    .subs {
+    .container {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -20,6 +20,9 @@
             color: white;
             margin-bottom: 10px;
             max-width: 420px;
+            @media (max-width: 1042px) {
+                text-align: center;
+            }
         }
 
         p {
@@ -27,6 +30,12 @@
             margin-bottom: 20px;
             color: #999;
             max-width: 420px;
+             @media (max-width: 1042px) {
+                text-align: center;
+            }
+        }
+        img{
+            width: 100%;
         }
     }
 

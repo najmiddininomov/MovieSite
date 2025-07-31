@@ -40,7 +40,7 @@ const Footer = () => {
           <div className="column social">
             <h3>Connect With Us</h3>
             <div className="icons">
-              <FaFacebookF />
+             <a href=""><FaFacebookF /></a> 
               <FaTwitter />
               <FaLinkedinIn />
             </div>
@@ -50,7 +50,7 @@ const Footer = () => {
         <hr />
 
         <div className="footer-bottom">
-          <p>©2023 streamvib, All Rights Reserved</p>
+          <p>©2023 streamvib, All Rights Reserved and Created by Najmiddin Inomov</p>
           <div className="links">
             <span>Terms of Use</span>
             <span>Privacy Policy</span>

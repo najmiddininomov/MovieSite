@@ -12,19 +12,21 @@
       color: #fff;
       border: 1px solid #ccc;
       cursor: pointer;
+      border-radius: 8px;
       transition: all 0.3s ease;
       margin: 5px;
 
       &:hover {
-        background-color: #444;
+        background-color: #e50914;
       }
     }
 
     .sorts-btns.active {
-      background-color: #00c897;
-      color: #000;
-      border-color: #00c897;
-      font-weight: bold;
+      background-color: #e50914;
+      color: #fff;
+      border-color: #b0060f;
+      outline: none;
+      border-radius: 8px;
     }
 
 

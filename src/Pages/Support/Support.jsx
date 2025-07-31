@@ -13,7 +13,7 @@ const Support = () => {
   return (
     <div className="Support">
       <div className="container">
-        <div className="subs">
+        
           <div className="Sub-info">
             <h2>Welcome to our support page!</h2>
             <p>
@@ -103,7 +103,7 @@ const Support = () => {
               </div>
             </form>
           </div>
-        </div>
+       
 
         <Faq />
         <Prem />
