@@ -29,12 +29,7 @@ const Inside = () => {
         });
         setMovie(res.data);
 
-        const trailerRes = await axios.get(`movie/${id}/videos`, {
-          headers: {
-            Authorization:
-              "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2YmI0Y2I2MTE2YjVmNDk4OThiNDFjMjBlMzVkM2E3NiIsIm5iZiI6MTc1MzMzMjU1MS40MjU5OTk5LCJzdWIiOiI2ODgxYmI0NzAzZGZkMWYxMDIxNmIxZDEiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.qqhQ8dQMQ8VdFigS7O5sBjKsxBpb7QjAe4cEuex1KPw",
-          },
-        });
+        const trailerRes = await axios.get(`movie/${id}/videos`);
 
         const trailer = trailerRes.data.results.find(
           (vid) => vid.type === "Trailer" && vid.site === "YouTube"
