@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+// import React, { useState } from "react";
 import "./Support.scss";
 import Faq from "../../Components/FAQ/Faq";
 import Prem from "../../Components/Prem/Prem";
@@ -6,10 +6,10 @@ import cart from "../../Assets/images/Sub(2).png";
 import India from "../../Assets/images/Image (9).svg";
 import { IoMdArrowDropdown } from "react-icons/io";
 const Support = () => {
-    const [opendrop, setdrop] = useState (false)
-    const handleClick = ()=>{
-        setdrop(!opendrop)
-    }
+    // const [opendrop, setdrop] = useState (false)
+    // const handleClick = ()=>{
+    //     setdrop(!opendrop)
+    // }
   return (
     <div className="Support">
       <div className="container">
