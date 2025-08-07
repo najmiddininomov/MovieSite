@@ -2,7 +2,7 @@ import axios from "./Service";
 
 const options = {
     headers :{
-        Authorization : import.meta.env.VITE_API_KEY,
+        Authorization: `Bearer ${import.meta.env.VITE_API_KEY}`,
     },
 };
 
